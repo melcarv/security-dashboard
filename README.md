@@ -15,7 +15,7 @@ O **CyberSecurity Dashboard** é uma aplicação web desenvolvida em **Angular**
 ---
 
 ## 🖥️ Tecnologias Utilizadas  
-- **Angular** – Framework frontend.  
+- **Angular v19.2.0** – Framework frontend.  
 - **D3.js** – Visualização de dados interativos.  
 - **Angular Material** – UI moderna e responsiva.  
 - **SCSS** – Estilização avançada.  
@@ -31,8 +31,8 @@ O **CyberSecurity Dashboard** é uma aplicação web desenvolvida em **Angular**
 
 ---
 
-## 📂 Estrutura do Projeto  
-```plaintext
+## 📂 Estrutura do Projeto
+
 📂 security-dashboard/
  ├── 📂 src/
  │   ├── 📂 app/
@@ -40,16 +40,22 @@ O **CyberSecurity Dashboard** é uma aplicação web desenvolvida em **Angular**
  │   │   │   ├── card-info/       # Card com informações de ameaças
  │   │   │   ├── threat-map/      # Mapa interativo de ataques
  │   │   │   ├── chart-graph/     # Gráficos D3.js para estatísticas
- │   │   ├── 📂 pages/            # Páginas principais
- │   │   │   ├── dashboard/       # Tela principal
- │   │   │   ├── threat-check/    # Verificação de URLs/IPs
- │   │   │   ├── data-leaks/      # Consulta de vazamentos
- │   │   │   ├── attack-map/      # Visualização de ataques
- │   │   ├── 📂 services/         # Consumo de APIs
- │   │   ├── 📂 models/           # Interfaces de tipagem
- │   │   ├── app.module.ts
- │   │   ├── app.component.ts
+ │   │   ├── 📂 pages/            # Páginas principais do app
+ │   │   │   ├── dashboard/       # Tela principal com overview
+ │   │   │   ├── threat-check/    # Verificação de URLs/IPs suspeitos
+ │   │   │   ├── data-leaks/      # Consulta de vazamentos de dados
+ │   │   │   ├── attack-map/      # Visualização de ameaças
+ │   │   ├── 📂 services/         # Serviços para consumir APIs
+ │   │   │   ├── security.service.ts # Consome APIs externas
+ │   │   ├── 📂 models/           # Interfaces para tipagem de dados
+ │   │   ├── 📂 signals/          # Signals para reatividade do estado global
+ │   │   ├── 📂 shared/           # Módulos e pipes compartilhados
+ │   │   ├── 📂 core/             # Serviços e configurações principais
+ │   │   ├── 📂 interceptors/     # Interceptores HTTP para logs e segurança
+ │   │   ├── app.config.ts        # Configuração com Standalone API
+ │   │   ├── main.ts              # Bootstrapping do Angular 19
  │   ├── 📂 assets/               # Ícones, imagens e estilos globais
  │   ├── 📂 environments/         # Configuração de API keys
  │   ├── index.html
  │   ├── styles.scss
+
